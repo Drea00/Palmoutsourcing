@@ -1,0 +1,92 @@
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;  /* Ensure the container is the positioning context */
+  cursor: grab;
+}
+
+.slider-container:active {
+  cursor: grabbing;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 1s ease-in-out;
+  width: fit-content;
+}
+
+.profile-card {
+  width: 23rem;
+  height: 31rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 45px;
+  transition: transform 0.3s ease;
+  z-index: 0; /* Ensure profile cards are below overlays */
+  background-size:cover; /* Ensure both background images cover the entire card */
+}
+.newst{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e1f0abd82148a789f5_2.png');
+}
+.lowst{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e15ce74a5cd8a7e610_3.png');
+}
+.sidest{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e1bcb2e976dc7f66e6_1.png');
+}
+.wowst{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e1f0abd82148a789f5_2.png');
+}
+.yost{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e1bcb2e976dc7f66e6_1.png');
+}
+.nawast{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e15ce74a5cd8a7e610_3.png');
+}
+.dudest{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://uploads-ssl.webflow.com/6547e5f468fb6e73e34e8a6b/664ef2e1f0abd82148a789f5_2.png');
+}
+
+.profile-card:hover {
+  transform: scale(0.97);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5rem;
+  pointer-events: none;
+  z-index: 1; /* Ensure overlays are above profile cards */
+}
+
+.gradient-overlay.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
+}
+
+.gradient-overlay.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
+}
